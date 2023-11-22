@@ -1,46 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>定時再生プログラム</title>
-</head>
-<body>
-
-<script>
-// 特定の時刻になったら動作する関数
-function startAtSpecificTime(hour, minute, second) {
-    // 現在の時刻を取得
-    var now = new Date();
-    var currentHour = now.getHours();
-    var currentMinute = now.getMinutes();
-    var currentSecond = now.getSeconds();
-
-    // 指定の時刻になったら処理を実行
-    if (currentHour === hour && currentMinute === minute && currentSecond === second) {
-        playVideo(); // ここで動画を再生する関数を呼び出す
-    } else {
-        console.log("まだ再生時刻ではありません。");
-    }
-}
-
-// 動画を再生する関数（例として、YouTubeの埋め込み動画を使用）
-function playVideo() {
-    var videoContainer = document.createElement("div");
-    videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/tjeJ5EZnWh4" frameborder="0" allowfullscreen></iframe>';
-    document.body.appendChild(videoContainer);
-}
-
-// 指定の時刻で定期的に確認
-setInterval(function() {
-    startAtSpecificTime(12, 0, 0); // 12:00:00になったら動画を再生する
-}, 1000); // 1秒ごとに確認
-</script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
