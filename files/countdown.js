@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("July 23, 2024 0:00:00 GMT+0900").getTime();
+var countDownDate = new Date("August 29, 2024 0:00:00 GMT+0900").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -23,6 +23,6 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "開始しました！！";
+    document.getElementById("countdown").innerHTML = "明けました";
   }
 }, 1000);
